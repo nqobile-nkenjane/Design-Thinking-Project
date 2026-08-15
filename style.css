@@ -1,0 +1,1055 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f3ee;
+    color: #171717;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: rgba(245, 243, 238, 0.96);
+    border-bottom: 1px solid #dedbd4;
+
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    font-size: 13px;
+    font-weight: 600;
+    transition: opacity .25s ease;
+}
+
+nav a:hover {
+    opacity: .5;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    min-height: 88vh;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(20,20,20,.60),
+            rgba(20,20,20,.60)
+        ),
+        url("images/foldable-stall.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    width: 100%;
+    padding: 100px 8%;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    margin-bottom: 25px;
+    padding: 8px 15px;
+
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    max-width: 900px;
+
+    margin-bottom: 28px;
+
+    font-size: clamp(48px,7vw,88px);
+    line-height: 1.02;
+}
+
+.hero h1 span {
+    display: block;
+    opacity: .65;
+}
+
+.hero p {
+    max-width: 680px;
+    margin-bottom: 35px;
+
+    font-size: 18px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: transform .25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: white;
+    color: #111;
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+}
+
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+.section {
+    width: 100%;
+    max-width: 1350px;
+
+    margin: auto;
+
+    padding: 110px 7%;
+}
+
+.section-title {
+    display: flex;
+    gap: 25px;
+
+    margin-bottom: 55px;
+}
+
+.section-title > span {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    opacity: .45;
+}
+
+.section-title small {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    opacity: .5;
+}
+
+.section-title h2 {
+    font-size: clamp(38px,5vw,62px);
+    line-height: 1.05;
+}
+
+.section-intro {
+    max-width: 750px;
+    margin-bottom: 40px;
+}
+
+.light {
+    color: white;
+}
+
+
+/* =========================
+   OVERVIEW
+   ========================= */
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+
+    gap: 55px;
+
+    align-items: stretch;
+}
+
+.overview-text h3 {
+    margin-bottom: 20px;
+
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.overview-text p {
+    margin-bottom: 20px;
+}
+
+.challenge-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 45px;
+
+    background: #171717;
+    color: white;
+
+    border-radius: 16px;
+}
+
+.challenge-card span {
+    margin-bottom: 18px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    opacity: .55;
+}
+
+.challenge-card h3 {
+    font-size: 25px;
+    line-height: 1.45;
+}
+
+
+/* =========================
+   DARK SECTION
+   ========================= */
+
+.dark-section {
+    max-width: none;
+
+    background: #171717;
+    color: white;
+}
+
+.dark-section > * {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================
+   MAIN IMAGE
+   ========================= */
+
+.image-feature {
+    margin-top: 40px;
+}
+
+.image-feature img {
+    width: 100%;
+    max-height: 650px;
+
+    object-fit: contain;
+
+    background: #242424;
+
+    border-radius: 16px;
+}
+
+.image-caption {
+    display: flex;
+    gap: 25px;
+
+    padding: 25px 5px;
+}
+
+.image-caption > span {
+    font-size: 13px;
+    font-weight: 800;
+    opacity: .4;
+}
+
+.image-caption h3 {
+    margin-bottom: 8px;
+    font-size: 23px;
+}
+
+.image-caption p {
+    max-width: 700px;
+    color: rgba(255,255,255,.65);
+}
+
+
+/* =========================
+   IMAGE CARDS
+   ========================= */
+
+.two-column-images {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.image-card {
+    overflow: hidden;
+
+    background: #222;
+
+    border: 1px solid #333;
+    border-radius: 15px;
+}
+
+.image-card img {
+    width: 100%;
+    height: 380px;
+
+    object-fit: contain;
+
+    background: #292929;
+
+    transition: transform .4s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.025);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content span,
+.ideate-text > span,
+.testing-text > span,
+.impact-grid span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    opacity: .5;
+}
+
+.card-content h3 {
+    margin: 8px 0;
+    font-size: 23px;
+}
+
+.card-content p {
+    color: rgba(255,255,255,.65);
+}
+
+
+/* =========================
+   DEFINE
+   ========================= */
+
+.full-image {
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #dedbd4;
+    border-radius: 16px;
+}
+
+.full-image img {
+    width: 100%;
+    max-height: 650px;
+
+    object-fit: contain;
+}
+
+.define-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    margin-top: 45px;
+}
+
+.define-text h3 {
+    margin-bottom: 20px;
+
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.define-text p {
+    margin-bottom: 18px;
+}
+
+.hmw-card {
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #dedbd4;
+    border-radius: 16px;
+}
+
+.hmw-card > span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    opacity: .5;
+}
+
+.hmw-card img {
+    width: 100%;
+    max-height: 420px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   IDEATE
+   ========================= */
+
+.light-section {
+    max-width: none;
+    background: #e9e7df;
+}
+
+.ideate-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+
+    gap: 55px;
+
+    align-items: center;
+}
+
+.ideate-image {
+    padding: 20px;
+
+    background: white;
+    border-radius: 16px;
+}
+
+.ideate-image img {
+    width: 100%;
+    max-height: 600px;
+
+    object-fit: contain;
+}
+
+.ideate-text h3 {
+    margin: 15px 0;
+
+    font-size: 35px;
+    line-height: 1.2;
+}
+
+.ideate-text ul {
+    margin-top: 25px;
+    padding-left: 20px;
+}
+
+.ideate-text li {
+    margin-bottom: 9px;
+}
+
+
+/* =========================
+   PROTOTYPE
+   ========================= */
+
+.prototype-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 30px;
+}
+
+.prototype-card {
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid #dedbd4;
+    border-radius: 16px;
+
+    transition: transform .3s ease;
+}
+
+.prototype-card:hover {
+    transform: translateY(-6px);
+}
+
+.prototype-image {
+    min-height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: #e8e5dd;
+}
+
+.prototype-image img {
+    width: 100%;
+    height: 380px;
+
+    object-fit: contain;
+}
+
+.prototype-content {
+    padding: 30px;
+}
+
+.prototype-content span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    opacity: .5;
+}
+
+.prototype-content h3 {
+    margin: 10px 0;
+
+    font-size: 27px;
+}
+
+.prototype-content p {
+    color: #666;
+}
+
+
+/* =========================
+   TESTING
+   ========================= */
+
+.testing-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+
+    gap: 55px;
+
+    align-items: center;
+}
+
+.testing-images {
+    display: grid;
+    gap: 20px;
+}
+
+.testing-image {
+    padding: 20px;
+
+    background: #242424;
+
+    border-radius: 16px;
+}
+
+.testing-image img {
+    width: 100%;
+    max-height: 600px;
+
+    object-fit: contain;
+}
+
+.testing-text h3 {
+    margin: 15px 0 20px;
+
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.testing-text p {
+    margin-bottom: 20px;
+    color: rgba(255,255,255,.7);
+}
+
+.testing-text ul {
+    padding-left: 20px;
+}
+
+.testing-text li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   SOLUTION
+   ========================= */
+
+.solution-section {
+    max-width: none;
+}
+
+.solution-hero {
+    position: relative;
+
+    max-width: 1200px;
+    margin: auto;
+
+    overflow: hidden;
+
+    background: #171717;
+
+    border-radius: 20px;
+}
+
+.solution-hero > img {
+    width: 100%;
+    height: 650px;
+
+    object-fit: contain;
+
+    background: #202020;
+}
+
+.solution-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 70px 45px 40px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0,0,0,.9)
+    );
+
+    color: white;
+}
+
+.solution-overlay h2 {
+    margin-bottom: 15px;
+
+    font-size: clamp(35px,5vw,65px);
+    line-height: 1.05;
+}
+
+.solution-overlay p {
+    max-width: 650px;
+    color: rgba(255,255,255,.8);
+}
+
+.solution-description {
+    max-width: 850px;
+
+    margin: 65px auto 50px;
+
+    text-align: center;
+}
+
+.solution-description h3 {
+    margin-bottom: 18px;
+
+    font-size: 32px;
+}
+
+.solution-features {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 20px;
+}
+
+.feature-card {
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #dedbd4;
+    border-radius: 14px;
+}
+
+.feature-card strong {
+    font-size: 12px;
+    opacity: .45;
+}
+
+.feature-card h3 {
+    margin: 12px 0 7px;
+
+    font-size: 22px;
+}
+
+.feature-card p {
+    color: #666;
+}
+
+.solution-image {
+    max-width: 1000px;
+
+    margin: 60px auto 0;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 16px;
+}
+
+.solution-image img {
+    width: 100%;
+    max-height: 650px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   IMPACT
+   ========================= */
+
+.impact-section {
+    max-width: none;
+    background: #e9e7df;
+}
+
+.impact-image {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 16px;
+}
+
+.impact-image img {
+    width: 100%;
+    max-height: 650px;
+
+    object-fit: contain;
+}
+
+.impact-grid {
+    max-width: 1100px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 25px;
+}
+
+.impact-grid > div {
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 15px;
+}
+
+.impact-grid h3 {
+    margin: 10px 0 20px;
+
+    font-size: 27px;
+}
+
+.impact-grid ul {
+    padding-left: 20px;
+}
+
+.impact-grid li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   CONCLUSION
+   ========================= */
+
+.conclusion {
+    padding: 120px 7%;
+
+    background: #171717;
+    color: white;
+
+    text-align: center;
+}
+
+.conclusion-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.conclusion-content > span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    opacity: .5;
+}
+
+.conclusion h2 {
+    max-width: 850px;
+
+    margin: 25px auto;
+
+    font-size: clamp(40px,6vw,70px);
+    line-height: 1.05;
+}
+
+.conclusion p {
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+
+    color: rgba(255,255,255,.7);
+}
+
+.conclusion img {
+    width: 100%;
+    max-height: 650px;
+
+    margin: auto;
+
+    object-fit: contain;
+
+    background: #242424;
+
+    border-radius: 16px;
+}
+
+
+/* =========================
+   SKILLS
+   ========================= */
+
+.skills-section {
+    text-align: center;
+}
+
+.skills-section .section-title {
+    justify-content: center;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 12px;
+
+    max-width: 900px;
+    margin: auto;
+}
+
+.skills span {
+    padding: 12px 20px;
+
+    background: #171717;
+    color: white;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    padding: 70px 7%;
+
+    background: #111;
+    color: white;
+
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: rgba(255,255,255,.6);
+}
+
+.footer-name {
+    margin-top: 25px;
+    font-size: 12px;
+    opacity: .6;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        display: none;
+    }
+
+    .overview-grid,
+    .define-grid,
+    .ideate-grid,
+    .testing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .two-column-images,
+    .prototype-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-features {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .section {
+        padding: 75px 5%;
+    }
+
+    .hero-overlay {
+        padding: 80px 6%;
+    }
+
+    .hero {
+        min-height: 82vh;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section-title {
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 40px;
+    }
+
+    .challenge-card {
+        padding: 30px;
+    }
+
+    .image-card img {
+        height: auto;
+        min-height: 250px;
+    }
+
+    .prototype-image {
+        min-height: 280px;
+    }
+
+    .prototype-image img {
+        height: 280px;
+    }
+
+    .solution-hero > img {
+        height: 500px;
+    }
+
+    .solution-overlay {
+        padding: 60px 25px 25px;
+    }
+
+    .solution-overlay h2 {
+        font-size: 38px;
+    }
+
+    .solution-features {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .conclusion {
+        padding: 85px 6%;
+    }
+}
